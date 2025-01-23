@@ -1,4 +1,4 @@
-# Pipeline_Setup
+# AWS CodePipeline_Setup
 
 # CodePipeline_Test Deployment with AWS CodePipeline
 This repository contains the files and configurations required to deploy the CodePipeline_Test application using AWS services such as CodePipeline, CodeBuild, and CodeDeploy.
@@ -58,6 +58,3 @@ git push origin main
 # Troubleshooting
 •	Build Failure: Check the CodeBuild logs for errors in the buildspec.yml configuration.
 •	Deployment Issues: Ensure the EC2 instance has the CodeDeploy agent running and accessible.
-
-# License
-This project is licensed under the MIT License. Feel free to modify and adapt it for your use.
