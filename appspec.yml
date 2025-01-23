@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/deploy_stage
+  - source: /scripts/after_install.sh
+    destination: /home/ubuntu/scripts
+    file_exists_behavior: OVERWRITE
+permissions:
+  - object: /home/ubuntu/scripts/after_install.sh
+    pattern: "**"
+    mode: "755"
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh

@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - yum -y install zip
+  build:
+    commands:
+      - echo Build started on `date`
+      - mkdir -p /tmp/pipeline-build
+      - cp -R * /tmp/pipeline-build
+  post_build:
+    commands:
+      - echo Running post_build commands
+      - zip -r pipeline-build-output-$(date +%Y-%m-%d).zip /tmp/pipeline-build
+      - echo Build completed on `date`
+artifacts:
+  files: '**/*.zip'
